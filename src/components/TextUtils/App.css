@@ -1,0 +1,304 @@
+/* Clean, minimal style for TextUtils to match the provided screenshot */
+
+body, .App {
+  background: #fafbfc;
+  color: #111;
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  width: 100%;
+  display: block;
+}
+
+body.dark-mode, .App.dark-mode {
+  background: #23262b !important;
+  color: #fff !important;
+}
+
+body.dark-mode .navbar, .App.dark-mode .navbar {
+  background: #181b1f !important;
+  color: #fff !important;
+}
+
+body.dark-mode .container, .App.dark-mode .container {
+  background: transparent !important;
+  color: #fff !important;
+  box-shadow: none;
+}
+
+body.dark-mode .textutils-main, .App.dark-mode .textutils-main {
+  color: #fff !important;
+}
+
+body.dark-mode .btn-primary, .App.dark-mode .btn-primary {
+  background: #0d6efd !important;
+  color: #fff !important;
+  border: none;
+}
+
+body.dark-mode .btn-primary:hover, .App.dark-mode .btn-primary:hover {
+  background: #0b5ed7 !important;
+}
+
+body.dark-mode textarea.form-control, .App.dark-mode textarea.form-control {
+  background: #6b6d70 !important;
+  color: #fff !important;
+  border-color: #aaa !important;
+}
+
+body.dark-mode .accordion-button, .App.dark-mode .accordion-button,
+body.dark-mode .accordion-body, .App.dark-mode .accordion-body {
+  background: #23262b !important;
+  color: #fff !important;
+  border: none;
+}
+
+.navbar {
+  background: #f8f9fa !important;
+  color: #222 !important;
+  box-shadow: none;
+  border-bottom: 1px solid #ececec;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 0 2vw;
+  position: relative;
+}
+
+.navbar .container-fluid {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .navbar-brand {
+  color: #222 !important;
+  font-weight: 600;
+  font-size: 1.15rem;
+  letter-spacing: 0.5px;
+  margin-right: 1.5rem;
+  padding: 0;
+}
+
+.navbar .navbar-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.navbar .nav-link {
+  color: #222 !important;
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 0 0.75rem;
+  background: none;
+  border: none;
+  border-radius: 0;
+  transition: color 0.2s;
+  text-decoration: none !important;
+}
+
+.navbar .nav-link.active {
+  border-bottom: none;
+  color: #111 !important;
+  font-weight: 500;
+}
+
+.navbar .nav-link:hover {
+  color: #555 !important;
+  background: none;
+}
+
+.navbar .form-check {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .form-check-label {
+  color: #222 !important;
+  font-size: 0.98rem;
+  font-weight: 400;
+  margin-left: 0.5rem;
+}
+
+.container {
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 2.5rem 0 0 0;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.textutils-main {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.textutils-main h1 {
+  text-align: center;
+  width: 100%;
+}
+
+.textutils-main textarea.form-control {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.textutils-main .btn-primary {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+h1, h2 {
+  color: #111;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.btn-primary {
+  background: #0d6efd;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 0.5rem 1.2rem;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  box-shadow: none;
+  transition: background 0.2s;
+  font-size: 1rem;
+}
+
+.btn-primary:hover {
+  background: #0b5ed7;
+}
+
+textarea.form-control {
+  border-radius: 6px;
+  border: 1.5px solid #e0e0e0;
+  font-size: 1.1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: #fff;
+  color: #22223b;
+  transition: border 0.2s, background 0.2s;
+  width: 100%;
+  min-height: 150px;
+  resize: vertical;
+}
+
+textarea.form-control:focus {
+  border-color: #0d6efd;
+  background: #fff;
+  outline: none;
+}
+
+.alert {
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Remove background and border from accordion for About page */
+.accordion-button, .accordion-body {
+  background: #fff;
+  color: #222;
+  border: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem 0 0 0;
+  }
+  .textutils-main {
+    max-width: 100vw;
+    padding: 0 2vw;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .btn-danger {
+    font-size: 0.95rem;
+    padding: 0.4rem 0.8rem;
+  }
+  .navbar {
+    padding: 0 1vw;
+    height: 48px;
+  }
+  .navbar .navbar-brand {
+    font-size: 1rem;
+    margin-right: 1rem;
+  }
+  .navbar .nav-link {
+    font-size: 0.95rem;
+    padding: 0 0.5rem;
+  }
+}
+
+/* Custom switch for dark mode toggle */
+.navbar .form-switch {
+  display: flex;
+  align-items: center;
+  min-height: 24px;
+  margin-bottom: 0;
+  background: transparent;
+  z-index: 10;
+}
+
+.navbar .form-check-input[type="checkbox"] {
+  width: 2.2em;
+  height: 1.2em;
+  background-color: #e4e4e4;
+  border-radius: 1em;
+  border: none;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  position: relative;
+}
+
+.navbar .form-check-input[type="checkbox"]:checked {
+  background-color: #4f46e5;
+}
+
+.navbar .form-check-input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  left: 0.2em;
+  top: 0.15em;
+  width: 0.9em;
+  height: 0.9em;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.2s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.navbar .form-check-input[type="checkbox"]:checked::before {
+  transform: translateX(1em);
+}
+
+.navbar .form-check-label {
+  margin-left: 0.5em;
+  color: #222 !important;
+  font-size: 0.98rem;
+  font-weight: 400;
+  user-select: none;
+}
